@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "math";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.page1 {
+  height: 90vh;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+nav {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 3vw;
+}
+
+video {
+  position: absolute;
+  top: -10vw;
+  left: 28vw;
+  opacity: 0.9;
+  z-index: -1;
+  transform: scale(1.4);
+}
+
+nav h2 {
+  font-weight: 400;
+  font-size: 1.7vw;
+}
+
+#btn {
+  font-size: 1.5vw;
+  font-weight: 100;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  border: none;
+  color: black;
+}
+#btn::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#btn:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#navbar{
+  z-index: 999;
+  background-color: #FF5F38;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: height 0.9s ease-out, opacity 0.7s ease-out, visibility 0.7s ease-out
+}
+#btn2 {
+  font-size: 1.5vw;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  right: 49px;
+  background: transparent;
+  border: none;
+  color: black;
+  height: 26px;
+  top: 48px;
+}
+#navbar.open {
+  height: 65%;
+  opacity: 1;
+  visibility: visible;
+}
+
+#navbar h3{
+  color: rgb(56, 56, 56);
+  font-size: 2vw;
+  font-family: math;
+  position: relative;
+  margin-top: 0vw;
+}
+
+#nav-box1 video{
+  height: 35%;
+  width: 17%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 7px;
+  margin-top: 15px;
+  top: 110px;
+  left: 93px;
+}
+.inner-btn{
+  border: 1px solid black;
+  padding: 0.9vw 2vw;
+  border-radius: 5px;
+  font-size: 1.2vw;
+  background: transparent;
+  margin: 1vw 0.6vw;
+  cursor: pointer;
+}
+.inner-btn a{
+  list-style: none;
+  text-decoration: none;
+  color: black;   
+}
+.inner-btn:hover{
+  background-color: rgb(99, 62, 62);
+  transition: all ease-in-out 0.4s;
+}
+#btn2::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#btn2:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#navbar ul{
+  /* border: 2px solid white; */
+  position: absolute;
+  top: 5vw;
+  right: 17vw;
+
+}
+#navbar ul li a{
+  text-decoration: none;
+  font-size: 3vw;
+  font-family: math;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+.nav-box2 ul li a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2.3px;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform ease 0.3s;
+  transform: scaleX(0);
+  cursor: pointer;
+}
+.nav-box2 ul li a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#navbar ul li{
+  list-style: none;
+}
+
+.page1-content {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  height: 68vh;
+  align-items: center;
+}
+
+.mini-cont h1 {
+  font-size: 4.1vw;
+  font-weight: 400;
+  font-family: system-ui;
+  padding: 0vw 3vw;
+  letter-spacing: 1px;
+  line-height: 4.8vw;
+}
+
+.mini2-cont {
+  /* border: 2px solid red; */
+  position: relative;
+  margin-right: 9vw;
+  bottom: 2vw;
+
+}
+
+.mini2-cont h3 {
+  font-size: 1.7vw;
+  font-weight: 400;
+  font-family: math;
+}
+
+.mini2-cont h4 {
+  font-size: 1.8vw;
+  font-weight: 400;
+  padding-bottom: 1.5vw;
+  font-family: math;
+}
+.images{
+  display: flex;
+}
+
+.page2 {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  padding: 2vw;
+}
+
+.page2 img {
+  height: 100%;
+  width: 99%;
+  object-fit: cover;
+  object-position: center;
+}
+.img1 h1{
+  font-size: 4vw;
+  margin-bottom: 1vw;
+  font-weight: 300;
+  font-family: math;
+  margin: 1.3vw 0px;
+  margin-bottom: -0.1vw;
+}
+.img1 h3{
+  font-size: 1.5vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+}
+.img2 h1{
+  font-size: 4vw;
+  margin-bottom: 1vw;
+  font-weight: 300;
+  font-family: math;
+  margin: 1.3vw 0px;
+  margin-bottom: -0.1vw;
+}
+.img2 h3{
+  font-size: 1.5vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+}
+.page3{
+  /* border: 2px solid red; */
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.video1 video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.center{
+  /* border: 2px solid red; */
+  height: 100vh;
+  height: 99vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video1 h1{
+  color: white;
+  /* border: 2px solid red;  */
+  font-size: 5vw;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-family: math;
+}
+.video1 h1::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 15px;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.video1 h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+
+#page8 {
+  height: 58vh;
+  width: 100%;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.page8-heading {
+  color: white;
+  padding: 5vw 3vw;
+}
+
+.page8-btn {
+  font-size: 1.4vw;
+  padding: 0.9vw 1vw;
+  border-radius: 8px;
+  background: transparent;
+  border: 1.5px solid white;
+  color: white;
+  text-align: center;
+  margin-top: 1.8vw;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.page8-btn a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  /* border: 2px solid red; */
+  padding: 9px 0px;
+}
+
+.page8-btn:hover {
+  background-color: rgb(249, 243, 243);
+  color: black;
+}
+.page8-btn a:hover {
+  color: black;
+}
+
+.page8-heading h1 {
+  font-size: 1.8vw;
+  font-weight: 500;
+  font-family: math;
+}
+
+.list-item ul li {
+  color: white;
+  list-style: none;
+  padding: 0 2.3vw;
+  font-size: 1.1vw;
+  font-family: math;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.list-item ul li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-item ul li a::after,
+.list2-item ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.list-item ul li a:hover::after,
+.list2-item ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.page8-content {
+  display: flex;
+  justify-content: space-between;
+  height: 52vh;
+}
+
+.list-item {
+  display: flex;
+  padding: 5vw 2vw;
+
+}
+
+.page8-content2 {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 3vw;
+}
+
+.place h3 {
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.email {
+  color: white;
+  display: flex;
+}
+
+.email h4 {
+  margin: 0vw 2.4vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+}
+
+.email h4::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.email h4:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.year {
+  color: white;
+}
+
+#footer {
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#footer h1 span {
+  font-size: 21vw;
+  color: white;
+  font-family: monospace;
+  font-weight: 900;
+  display: inline-block;
+}
